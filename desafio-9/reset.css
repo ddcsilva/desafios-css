@@ -1,0 +1,73 @@
+/* ===== RESET CSS ===== */
+/* Reset das configurações padrão do navegador */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove a margem padrão */
+* {
+  margin: 0;
+}
+
+/* Habilita animações de palavras-chave */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5; /* Adiciona uma altura de linha acessível */
+  -webkit-font-smoothing: antialiased; /* Melhora o renderização de texto */
+}
+
+/* Melhora as configurações padrão de mídia */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Herda fontes para controles de formulário */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Evita transbordamentos de texto */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Melhora o quebra de linha */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Cria um contexto de empilhamento raiz */
+#root,
+#__next {
+  isolation: isolate;
+}

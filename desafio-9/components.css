@@ -1,0 +1,59 @@
+/* ===== COMPONENTES ===== */
+/* Componentes visuais e utilitários */
+
+/* ===== LINKS DE NAVEGAÇÃO ===== */
+.nav-link {
+  text-decoration: none;
+  display: block;
+  border-radius: 4px;
+  transition: all var(--transition-base);
+  font-weight: var(--font-weight-medium);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ===== LINKS DO CABEÇALHO ===== */
+.header__links {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+}
+
+.header__links li {
+  list-style: none;
+}
+
+.header__links .nav-link {
+  color: var(--color-text-light-90);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.header__links .nav-link:hover {
+  background-color: var(--color-text-light-10);
+  color: var(--color-text-light);
+}
+
+.header__links .nav-link--active {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+}
+
+/* ===== LINKS DO MENU LATERAL ===== */
+.sidebar .nav-link {
+  color: var(--color-text-medium);
+  padding: 12px var(--spacing-sm);
+}
+
+.sidebar .nav-link:hover {
+  background-color: var(--color-sidebar-hover);
+  color: var(--color-text-dark);
+}
+
+.sidebar .nav-link--active {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  box-shadow: var(--shadow-sm);
+}
