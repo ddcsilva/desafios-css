@@ -66,6 +66,14 @@ Refatore seu código usando a metodologia BEM (Block, Element, Modifier). Aprend
 
 ---
 
+### 🔹 [Desafio 8: Layout Completo com Grid Areas](./desafio-8)
+
+**Conceitos:** `grid-template-areas`, `grid-area`, Layout Completo, Grid + Flexbox
+
+Crie um layout de página completo com header, sidebar, conteúdo e footer usando Grid Areas. Aprenda a nomear regiões do grid e criar layouts profissionais que se reorganizam em diferentes telas.
+
+---
+
 ## 🚀 Como Usar Este Repositório
 
 1. **Comece pelo Desafio 1** e siga a ordem sequencial

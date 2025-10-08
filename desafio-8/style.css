@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  grid-template-areas:
+    "topo topo"
+    "menu conteudo"
+    "rodape rodape";
+}
+
+.header {
+  grid-area: topo;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 16px;
+}
+
+.header__logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header__links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.header__links li {
+  list-style: none;
+}
+
+.header__links a {
+  text-decoration: none;
+}
+
+.sidebar {
+  grid-area: menu;
+  background-color: #f0f0f0;
+  padding: 16px;
+}
+
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sidebar__links li {
+  list-style: none;
+}
+
+.sidebar__links a {
+  text-decoration: none;
+}
+
+.main-content {
+  grid-area: conteudo;
+  padding: 16px;
+}
+
+.footer {
+  grid-area: rodape;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 16px;
+}
+
+.footer__text {
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "topo"
+      "menu"
+      "conteudo"
+      "rodape";
+  }
+}
