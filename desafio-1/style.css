@@ -1,0 +1,12 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute; /* Tira o botão do fluxo normal da página */
+  top: 50%; /* Move o topo do botão para 50% da altura do container */
+  left: 50%; /* Move a esquerda do botão para 50% da largura do container */
+  transform: translate(-50%, -50%); /* Move o botão para o centro do container */
+}

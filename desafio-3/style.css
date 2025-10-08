@@ -1,0 +1,37 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex; /* Define o container como um flex container */
+  flex-direction: row; /* Define a direção do flex container como linha */
+  justify-content: center; /* Centraliza o conteúdo do flex container horizontalmente */
+  align-items: center; /* Centraliza o conteúdo do flex container verticalmente */
+  height: 100vh; /* Define a altura do flex container como 100% da altura da viewport */
+  gap: 16px; /* Define um espaçamento de 16px entre os botões */
+}
+
+.button {
+  border: none; /* Remove a borda do botão */
+  padding: 15px 30px; /* Adiciona espaçamento interno de 15px na vertical e 30px na horizontal */
+  background-color: #4285f4; /* Define a cor de fundo do botão para azul */
+  color: #ffffff; /* Define a cor do texto do botão para branco */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Define uma sombra leve do botão */
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s; /* Define uma transição suave para as propriedades background-color, box-shadow e transform */
+  border-radius: 8px; /* Define um raio de 8px para as bordas do botão para arredondar as cantos */
+}
+
+.button:hover {
+  background-color: #3367d6; /* Define a cor de fundo do botão para um tom de azul mais escuro ao passar o mouse */
+}
+
+.button:active {
+  box-shadow: none; /* Remove a sombra do botão ao ser clicado */
+  transform: translate(0, 2px); /* Move o botão para baixo ao ser clicado */
+}
+
+.button:focus {
+  outline: 1.5px solid #ffc107; /* Define um contorno amarelo ao botão ao ser focado */
+}

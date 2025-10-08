@@ -1,0 +1,34 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute; /* Tira o botão do fluxo normal da página */
+  top: 50%; /* Move o topo do botão para 50% da altura do container */
+  left: 50%; /* Move a esquerda do botão para 50% da largura do container */
+  transform: translate(-50%, -50%); /* Move o botão para o centro do container */
+}
+
+.button {
+  border: none; /* Remove a borda do botão */
+  padding: 15px 30px; /* Adiciona espaçamento interno de 15px na vertical e 30px na horizontal */
+  background-color: #4285f4; /* Define a cor de fundo do botão para azul */
+  color: #ffffff; /* Define a cor do texto do botão para branco */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Define uma sombra leve do botão */
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s; /* Define uma transição suave para as propriedades background-color, box-shadow e transform */
+}
+
+.button:hover {
+  background-color: #3367d6; /* Define a cor de fundo do botão para um tom de azul mais escuro ao passar o mouse */
+}
+
+.button:active {
+  box-shadow: none; /* Remove a sombra do botão ao ser clicado */
+  transform: translate(0, 2px); /* Move o botão para baixo ao ser clicado */
+}
+
+.button:focus {
+  outline: 1.5px solid #ffc107; /* Define um contorno amarelo ao botão ao ser focado */
+}
