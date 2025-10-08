@@ -1,0 +1,134 @@
+:root {
+  /* Tipografia */
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+
+  /* Cores */
+  --color-neutral-100: #f0f0f0;
+  --color-neutral-200: #e0e0e0;
+  --color-neutral-300: #d0d0d0;
+  --color-neutral-400: #c0c0c0;
+  --color-neutral-500: #b0b0b0;
+  --color-neutral-600: #666666;
+  --color-neutral-700: #505050;
+  --color-neutral-800: #404040;
+  --color-neutral-900: #303030;
+
+  /* Espaçamentos */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 40px;
+
+  /* Transições */
+  --transition-base: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  grid-template-areas:
+    "topo topo"
+    "menu conteudo"
+    "rodape rodape";
+}
+
+.header {
+  grid-area: topo;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-neutral-100);
+  padding: var(--spacing-sm);
+}
+
+.header__logo {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+}
+
+.header__links {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+}
+
+.header__links li {
+  list-style: none;
+}
+
+.sidebar {
+  grid-area: menu;
+  background-color: var(--color-neutral-100);
+  padding: var(--spacing-sm);
+}
+
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sidebar__links li {
+  list-style: none;
+}
+
+.main-content {
+  grid-area: conteudo;
+  padding: var(--spacing-sm);
+}
+
+.footer {
+  grid-area: rodape;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-neutral-100);
+  padding: var(--spacing-sm);
+}
+
+.footer__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+}
+
+.nav-link {
+  color: var(--color-neutral-600);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.nav-link:hover {
+  color: var(--color-neutral-800);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-neutral-800);
+  outline-offset: 2px;
+}
+
+.nav-link--active {
+  color: var(--color-neutral-900);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "topo"
+      "menu"
+      "conteudo"
+      "rodape";
+  }
+}
